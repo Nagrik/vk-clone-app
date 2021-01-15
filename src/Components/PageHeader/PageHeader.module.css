@@ -1,0 +1,14 @@
+.PageHeader{
+    width: 100%;
+    height: 50px;
+    background: rgb(74, 118, 168);
+
+}
+
+.ContainerHeader{
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+}
+

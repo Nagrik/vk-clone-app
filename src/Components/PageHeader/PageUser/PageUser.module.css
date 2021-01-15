@@ -1,0 +1,31 @@
+.PageUser{
+    width: 487px;
+    height: 48px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Name{
+    color: white;
+    font-weight: 600;
+}
+
+.Photo{
+    background-image: url(Images/Photo.jpg);
+    width: 30px;
+    height: 30px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.ArrowDown{
+    color: white;
+    width: 13px;
+    height: 13px;
+    margin-left: 15px;
+    cursor: pointer;
+}
