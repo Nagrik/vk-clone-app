@@ -1,0 +1,50 @@
+.PageMenu{
+    width: 17%;
+    list-style: none;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.Container{
+    max-width: 1024px;
+    display: flex;
+    margin: 0 auto;
+
+}
+
+.Items{
+    text-align: left;
+    padding: 5px 0;
+    list-style: none;
+
+}
+.Items span{
+    vertical-align: text-bottom;
+    text-align: left;
+}
+
+.Link{
+    color: #4a76a8;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 1;
+    width: 100%;
+    line-height: 1.5;
+    padding: 3px 0;
+    text-align: left;
+}
+
+.Link:hover{
+    opacity: 0.8;
+}
+.Items:first-child{
+    padding-top: 0;
+}
+
+
+
+
+.Menu a:hover{
+    opacity: 1;
+}
+
