@@ -1,14 +1,13 @@
 .PageMenu{
-    width: 17%;
+    width: 40%;
     list-style: none;
     margin-top: 20px;
     text-align: left;
 }
 
 .Container{
-    max-width: 1024px;
+    width: 168px;
     display: flex;
-    margin: 0 auto;
 
 }
 

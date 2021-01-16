@@ -1,0 +1,52 @@
+.HomeAvatar{
+    width: 220px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: rgb(215, 216, 219) 0 1px 0 0, rgb(227, 228, 232) 0 0 0 1px;
+    margin: 10px 10px 10px 0;
+    padding: 15px;
+
+}
+
+.Photo{
+    background-image: url('Photos/Photo.jpg');
+    width: 200px;
+    height: 200px;
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.Button{
+    background: rgb(229, 235, 241);
+    border: none;
+    color: rgb(85, 103, 125);
+    font-size: 13px;
+    padding: 6px 70px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.Wrapper{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 6px;
+}
+
+.Stats{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(85, 103, 125);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(229, 235, 241);
+}

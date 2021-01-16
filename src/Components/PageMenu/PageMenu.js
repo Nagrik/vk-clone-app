@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import classes from './PageMenu.module.css'
-import {BrowserRouter, Link, Router} from 'react-router-dom'
+import {BrowserRouter, Link} from 'react-router-dom'
 
 export default class PageMenu extends Component {
     render() {
