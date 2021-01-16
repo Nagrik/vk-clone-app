@@ -5,7 +5,6 @@
     border-radius: 3px;
     box-shadow: rgb(215, 216, 219) 0 1px 0 0, rgb(227, 228, 232) 0 0 0 1px;
     margin: 10px 10px 10px 0;
-    padding: 15px;
 
 }
 
@@ -51,4 +50,5 @@
     height: 20px;
     border: 2px solid rgb(229, 235, 241);
     margin-top: 10px;
+    background: rgb(229, 235, 241);
 }

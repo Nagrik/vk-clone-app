@@ -27,11 +27,13 @@
 
 .Wrapper{
     display: flex;
-    margin-top: 80px;
+    margin-top: 20px;
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    padding: 0 30px;
+    padding: 10px 30px;
+    border-top: 1px solid rgb(223,230,237);
+
 }
 
 .Number{
@@ -45,6 +47,6 @@
 .Names{
     font-size: 13px;
     color:rgb(130, 130, 130) ;
-    margin: 3px 0px;
+    margin: 3px 0;
     font-family: sans-serif;
 }

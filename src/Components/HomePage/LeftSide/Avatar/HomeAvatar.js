@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import classes from './HomeAvatar.module.css'
-import { FaChartBar } from 'react-icons/fa';
+import { FaRegChartBar } from 'react-icons/fa';
 
 export default class HomeAvatar extends Component{
     render(){
@@ -12,7 +12,7 @@ export default class HomeAvatar extends Component{
                 <button type='button' className={classes.Button}>
                     Edit
                 </button>
-                <FaChartBar className={classes.Stats}/>
+                <FaRegChartBar className={classes.Stats}/>
             </div>
         </div>
     )

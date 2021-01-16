@@ -1,3 +1,58 @@
 .ShowInfo{
+    margin-left: -220px;
+}
 
+.MainInfo{
+    position: relative;
+    margin: 20px 0;
+}
+
+.MainInfo::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 8px;
+    height: 1px;
+    background:rgb(119, 119, 119) ;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.MainInfoText{
+    z-index: 9999;
+    background: white;
+    padding:  5px 10px 5px 0;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.MainQuestion{
+    width: 40%;
+}
+
+.MainQuestion li{
+    padding-top: 10px;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.MainAnswers{
+    width: 60%;
+}
+
+.MainAnswers a{
+    color: rgb(42,88,133);
+    text-decoration: none;
+}
+
+.MainAnswers li{
+    padding-top: 10px;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.Block1{
+    display: flex;
 }
