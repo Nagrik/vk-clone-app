@@ -4,11 +4,14 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-right: 15px;
 }
 
 .Name{
     color: white;
     font-weight: 600;
+    font-family: sans-serif;
+    font-size: 12px;
 }
 
 .Photo{

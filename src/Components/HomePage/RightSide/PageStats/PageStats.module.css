@@ -1,0 +1,50 @@
+.PageStats{
+}
+
+.Friends{
+
+}
+
+.Followers{
+
+}
+
+.Photos{
+
+}
+
+.Tags{
+
+}
+
+.Videos{
+
+}
+
+.Audio{
+
+}
+
+.Wrapper{
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.Number{
+    font-size: 19px;
+    color: rgb(66, 100, 139);
+    padding-bottom: 3px;
+    line-height: 21px;
+    font-family: sans-serif;
+}
+
+.Names{
+    font-size: 13px;
+    color:rgb(130, 130, 130) ;
+    margin: 3px 0px;
+    font-family: sans-serif;
+}

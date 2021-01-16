@@ -28,6 +28,7 @@
     padding: 6px 70px;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .Wrapper{
@@ -49,4 +50,5 @@
     width: 20px;
     height: 20px;
     border: 2px solid rgb(229, 235, 241);
+    margin-top: 10px;
 }

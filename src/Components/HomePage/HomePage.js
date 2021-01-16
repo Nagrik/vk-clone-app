@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import classes from './HomePage.module.css'
 import PageMenu from "../PageMenu/PageMenu";
-import HomeAvatar from "./HomeAvatar/HomeAvatar";
+import LeftSide from "./LeftSide/LeftSide";
+import RightSide from "./RightSide/RightSide";
 
 export default class HomePage extends Component{
     render(){
@@ -9,7 +10,8 @@ export default class HomePage extends Component{
     return(
         <div className={classes.HomePage}>
             <PageMenu/>
-            <HomeAvatar/>
+            <LeftSide/>
+            <RightSide/>
         </div>
     )
     }

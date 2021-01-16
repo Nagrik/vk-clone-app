@@ -1,0 +1,36 @@
+.PageInfoHeader{
+    width: 100%;
+}
+
+.Name{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    font-size: 19px;
+    color: rgb(34,34,34);
+    font-family: sans-serif;
+}
+
+.Status{
+    color: rgb(34,34,34);
+    opacity: 0.7;
+    font-size: 12px;
+    line-height: 1.5em;
+    padding-left: 12px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+.State{
+    font-size: 12px;
+    color: black;
+    opacity: 0.4;
+    font-family: sans-serif;
+}
+
+.StatusWrapper{
+    border-bottom: 1px solid rgb(223,230,237);
+
+}

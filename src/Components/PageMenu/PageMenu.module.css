@@ -3,6 +3,8 @@
     list-style: none;
     margin-top: 20px;
     text-align: left;
+    padding-left: 15px;
+    font-family: sans-serif;
 }
 
 .Container{
@@ -38,6 +40,7 @@
 }
 .Items:first-child{
     padding-top: 0;
+    width: 100px;
 }
 
 
