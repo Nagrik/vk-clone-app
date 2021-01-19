@@ -1,0 +1,27 @@
+.MyPhotos{
+    background-color: #fff;
+    box-shadow:rgb(215, 216, 219) 0px 1px 0px 0px, rgb(227, 228, 232) 0px 0px 0px 1px ;
+    margin: 10px 10px 10px 0;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+.Title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Title span{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(85,85,85);
+    padding-bottom: 10px;
+}
+
+.Title a{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(147,147,147);
+    text-decoration: none;
+    padding-bottom: 10px;
+}
