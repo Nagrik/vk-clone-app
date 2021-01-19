@@ -1,5 +1,4 @@
 .HomeAvatar{
-    width: 220px;
     padding: 15px;
     background-color: white;
     border-radius: 3px;
@@ -13,10 +12,10 @@
     width: 200px;
     height: 200px;
     background-size:cover;
-    background-position: center;
     background-repeat:no-repeat;
-    margin: 0 auto;
     cursor: pointer;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 .Button{

@@ -1,0 +1,61 @@
+.Group{
+background: white;
+    padding: 20px 15px 15px;
+    margin: 10px 10px 0 0;
+    border-radius: 3px;
+    box-shadow:rgb(215, 216, 219) 0 1px 0 0, rgb(227, 228, 232) 0 0 0 1px ;
+}
+
+.Title{
+display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.Title p{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(119,119,119);
+}
+
+.Title a{
+    font-size: 12px;
+    color: black;
+    font-family: sans-serif;
+}
+
+.Wrapper{
+display: flex;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.Circle{
+    width: 20%;
+    height: 40px;
+    background: rgb(51,51,51);
+    border-radius: 50%;
+}
+
+.ContentWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.ContentWrapper a{
+    color: rgb(42,88,133);
+    font-size: 13px;
+    text-align: left;
+    padding-left:10px ;
+    font-family: sans-serif;
+}
+
+.ContentWrapper p{
+    font-size: 12px;
+    max-height: 48px;
+    overflow: hidden;
+    color: rgb(101,101,101);
+    text-align: left;
+    padding: 5px 0 0 10px;
+    font-family: sans-serif;
+}

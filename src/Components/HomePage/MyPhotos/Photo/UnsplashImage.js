@@ -8,7 +8,7 @@ const Img = styled.img`
   margin: 3px;
 `;
 
-export const UnsplashImage = ({url, key}) => {
-    return <Img src={url} key={key} alt=''/>
+export const UnsplashImage = ({url}) => {
+    return <Img src={url}  alt=''/>
 
 }

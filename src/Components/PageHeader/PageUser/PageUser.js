@@ -9,17 +9,17 @@ export default class PageUser extends Component {
 
 
     state = {
-        isArrowIn: true
+        isArrowIn: 'true'
     }
 
     handleArrowUpClick = () => {
         this.setState({
-            isArrowIn:false
+            isArrowIn:'false'
         })
     }
     handleArrowDownClick = () =>{
         this.setState({
-            isArrowIn:true
+            isArrowIn:'true'
         })
     }
     render() {
@@ -29,7 +29,7 @@ export default class PageUser extends Component {
                 <span className={classes.Name}>Roman</span>
                 <div className={classes.Photo}/>
                 <div>
-                    {isArrowIn === true
+                    {isArrowIn === 'true'
                         ? <FaChevronDown className={classes.ArrowDown} onClick={this.handleArrowUpClick}/>
                         : <FaChevronUp className={classes.ArrowDown} onClick={this.handleArrowDownClick}/>
                     }

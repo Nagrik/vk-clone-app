@@ -10,7 +10,7 @@ export default class PageMenu extends Component {
                 <div className={classes.PageMenu}>
                     <BrowserRouter>
                     <li className={classes.Items}>
-                        <Link exact to="/Vk-clone" className={classes.Link}>
+                        <Link to="/Vk-clone" className={classes.Link}>
                             <span>My profile</span>
                         </Link>
                     </li>

@@ -1,0 +1,61 @@
+.Friends{
+    background: rgb(255,255,255);
+    padding: 20px 15px 15px;
+    margin: 0 10px 0 0;
+    border-radius: 3px;
+    box-shadow: rgb(215, 216, 219) 0 1px 0 0, rgb(227, 228, 232) 0 0 0 1px;
+}
+
+.WrapperTitle{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.Number{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    font-family: sans-serif;
+}
+
+.Number p {
+    font-size: 12px;
+    padding-left: 10px;
+    color: rgb(119,119,119);
+    font-family: sans-serif;
+}
+
+ a{
+    font-size: 12px;
+    color: rgb(147,147,147);
+    text-decoration: none;
+     font-family: sans-serif;
+}
+ .Img{
+     border-radius: 50%;
+     height: 50px;
+     width: 50px;
+     background: center center/cover;
+ }
+
+ .Pictures p{
+    font-size: 12px;
+     color: rgb(68,68,68);
+     margin-top: 5px;
+     text-transform: capitalize;
+     font-family: sans-serif;
+     text-align: center;
+ }
+ .Pictures{
+     margin: 3px;
+ }
+
+ .WrapperImage{
+     display: flex;
+     justify-content: space-between;
+     padding: 15px 0 0;
+     flex-wrap: wrap;
+ }
