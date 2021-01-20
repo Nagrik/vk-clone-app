@@ -15,7 +15,7 @@
 }
 
 .Photo{
-    background-image: url(Images/Photo.jpg);
+    background-image: url(/src/images/Photo.jpg);
     width: 30px;
     height: 30px;
     background-repeat:no-repeat;

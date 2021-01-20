@@ -49,7 +49,7 @@ export default class PageInfoContent extends Component {
                     }
 
                     { showInfo === 'Show full information'
-                        ? <p  onClick={this.handleShowInfoClick}>&nbsp;</p>
+                        ? <p  onClick={this.handleShowInfoClick}/>
                         :  <ShowInfo/>
                     }
                 </div>

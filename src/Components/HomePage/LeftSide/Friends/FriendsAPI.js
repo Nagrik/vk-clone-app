@@ -36,8 +36,8 @@ class FriendsAPI extends Component{
             return (
                 <div className={classes.WrapperImage}>
 
-                    { items.map((item,key) => (
-                        <div className={classes.Pictures} >
+                    { items.map((item, index) => (
+                        <div className={classes.Pictures} key={index}>
                         <img src={item.picture.medium} alt={item.name.first} className={classes.Img}/>
                         <p>{item.name.first}</p>
                         </div>
