@@ -1,0 +1,51 @@
+.Wrapper{
+    background: rgb(255,255,255);
+    margin: 10px 10px 0 0;
+    border-radius: 3px;
+    box-shadow: rgb(215, 216, 219) 0 1px 0 0, rgb(227, 228, 232) 0 0 0 1px;
+}
+
+.Inside{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: rgb(255,255,255);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    box-shadow:rgb(215, 216, 219) 0 1px 0 0, rgb(227, 228, 232) 0 0 0 1px ;
+    padding: 15px 15px 10px;
+    margin: 10px 0 0;
+    height: 32px;
+}
+
+.Link{
+    padding-bottom: 22px;
+    padding-top: 10px;
+    font-size: 14px;
+    color: rgb(101,101,101);
+}
+
+.LinkActive{
+    border-bottom: 2px solid rgb(81,129,184);
+    padding-bottom: 22px;
+    padding-top: 10px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: rgb(101,101,101);
+}
+
+.Search{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(74,118,168);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+}
+
+.SearchWrapper{
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
