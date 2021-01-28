@@ -16,8 +16,9 @@ export default class RightSide extends Component {
                 {/*<Posts/>*/}
                 <PostForm/>
                 <UserPosts/>
-                <DefaultPost/>
                 <Posts/>
+                <DefaultPost/>
+
             </div>
         )
     }

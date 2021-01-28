@@ -13,6 +13,14 @@
     font-family: sans-serif;
 }
 
+.Name h3{
+    font-family: sans-serif;
+    font-size: 19px;
+    color: rgb(34,34,34);
+    font-weight: 300;
+
+}
+
 .Status{
     color: rgb(34,34,34);
     opacity: 0.7;

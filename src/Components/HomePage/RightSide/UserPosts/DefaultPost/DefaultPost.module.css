@@ -64,3 +64,73 @@
     box-shadow:rgb(215, 216, 219) 0 1px 0 0, rgb(227, 228, 232) 0 0 0 1px ;
     padding: 10px 15px 5px;
 }
+
+.PostTextWrapper{
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.PostText{
+    font-size: 14px;
+    line-height: 1.5em;
+    color: rgb(85,85,85);
+}
+
+.UnderPostWrapper{
+    padding: 10px 10px;
+    border-top: 1px solid rgb(231,232,236);
+    display: flex;
+    justify-content: space-between;
+}
+
+.UnderPost{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.Icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    color: rgb(74,118,168);
+}
+
+
+
+.IconActive{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(245, 2, 36);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+}
+
+.Count{
+    margin-left:7px;
+    font-size: 18px;
+}
+
+.Heart{
+    display: flex;
+    align-items: center;
+    color: rgb(74,118,168);
+}
+
+.Eye{
+    display: flex;
+    color: rgb(74,118,168);
+    align-items: center;
+}
+
+.EyeNumber{
+    padding-left: 7px;
+}
