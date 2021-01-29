@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import Post from "./Post";
 
 
-const Posts =  ({syncPosts}) => {
+const Posts =({syncPosts}) => {
 
     return syncPosts.map(post => <Post post={post} key={post.id}/> )
 }

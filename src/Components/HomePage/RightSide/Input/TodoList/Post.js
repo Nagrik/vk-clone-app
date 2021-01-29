@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import classes from "../../UserPosts/DefaultPost/DefaultPost.module.css";
 import {FaAngleDown, FaComment, FaEye, FaHeart, FaShare} from "react-icons/fa";
+import Comment from "../../Comments/Comment";
+import MainComments from "../../MainComments/MainComments";
 
 export default ({post}) => {
 
@@ -17,9 +19,6 @@ export default ({post}) => {
         toggleCount()
     }
     return(
-    //     <div>
-
-    //     </div>
         <div className={classes.DefaultPost}>
             <div className={classes.Header}>
                 <div className={classes.UserInfo}>
@@ -63,6 +62,7 @@ export default ({post}) => {
                     <div className={classes.EyeNumber}>1</div>
                 </div>
             </div>
+            <MainComments/>
         </div>
     )
 }

@@ -134,3 +134,9 @@
 .EyeNumber{
     padding-left: 7px;
 }
+
+.Closed{
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}

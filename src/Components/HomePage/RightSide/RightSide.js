@@ -18,7 +18,6 @@ export default class RightSide extends Component {
                 <UserPosts/>
                 <Posts/>
                 <DefaultPost/>
-
             </div>
         )
     }

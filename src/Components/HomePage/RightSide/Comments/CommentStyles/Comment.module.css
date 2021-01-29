@@ -1,0 +1,92 @@
+.Photo{
+    background: url(/src/images/Photo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 7px;
+}
+
+.Wrapper{
+    display: flex;
+    padding: 10px 0;
+    border-top: 1px solid rgb(231,232,236);
+
+}
+
+.commentWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.Name{
+    color: rgb(42,88,133);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.Time{
+    font-size: 12px;
+    max-height: 48px;
+    overflow: hidden;
+    color: rgb(101,101,101);
+    text-align: left;
+    padding: 2px 0 0 10px;
+}
+
+.TimeWrapper{
+    display: flex;
+}
+
+.Text{
+    font-size: 14px;
+    line-height: 1.5em;
+    color: rgb(85,85,85);
+    text-align: left;
+    padding: 3px 10px;
+}
+
+.Answer{
+    font-size: 13px;
+    max-height: 48px;
+    overflow: hidden;
+    color: rgb(42,88,133);
+    text-align: left;
+    padding: 2px 0 0 10px;
+}
+
+.PhotoMusk{
+    background: url(/src/images/Elon.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 7px;
+}
+
+.PhotoMark{
+    background: url(/src/images/Mark.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 7px;
+}
+
+.NameLink{
+    color: rgb(32, 103, 183);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+

@@ -46,7 +46,7 @@ class PostForm extends React.Component {
                  <form onSubmit={this.submitHandler} className={classes.Form}>
                    <div className={classes.InputWrapper} >
                        <div className={classes.photo}/>
-                   <textarea
+                   <input
                        type='text'
                        className={classes.InputActive}
                        id='title'

@@ -1,6 +1,6 @@
 .MyPhotos{
     background-color: #fff;
-    box-shadow:rgb(215, 216, 219) 0px 1px 0px 0px, rgb(227, 228, 232) 0px 0px 0px 1px ;
+    box-shadow:rgb(215, 216, 219) 0 1px 0 0, rgb(227, 228, 232) 0 0 0 1px ;
     margin: 10px 10px 10px 0;
     padding: 15px;
     border-radius: 3px;
