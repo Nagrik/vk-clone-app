@@ -10,7 +10,7 @@ export default () => {
                 <div className={classes.Name}>
                     Elon Musk
                 </div>
-                <p className={classes.Text}>Great words!</p>
+                <div className={classes.Text}>Great words!</div>
                 <div className={classes.TimeWrapper}>
                     <div className={classes.Time}>
                         2 days ago
@@ -27,9 +27,9 @@ export default () => {
             <div className={classes.Name}>
                 Mark Zuckerberg
             </div>
-            <p className={classes.Text}>
+            <div className={classes.Text}>
                 <a  className={classes.NameLink} href='/'>Elon,</a> I agree with you
-            </p>
+            </div>
             <div className={classes.TimeWrapper}>
                 <div className={classes.Time}>
                     1 days ago

@@ -54,6 +54,7 @@ class PostForm extends React.Component {
                        name='title'
                        onChange={this.changeInputHandler}
                        placeholder="What's new?"
+                       autoComplete="off"
                      />
                          <div className={classes.IconWrapper}>
                              <div className={classes.IconActive}>

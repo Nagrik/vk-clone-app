@@ -4,6 +4,7 @@ import classes from './LeftSide.module.css'
 import Friends from "./Friends/Friends";
 import FriendsOnline from "./FriendsOnline/FriendsOnline";
 import Group from "./Group/Group";
+import Album from "./Albums/Albums";
 
 export default class LeftSide extends Component {
     render() {
@@ -13,6 +14,7 @@ export default class LeftSide extends Component {
                 <Friends/>
                 <FriendsOnline/>
                 <Group/>
+                <Album/>
             </div>
         )
     }

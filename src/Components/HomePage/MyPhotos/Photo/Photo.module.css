@@ -4,3 +4,129 @@
     justify-content: space-between;
 }
 
+.ModalWindow{
+    padding: 10px !important;
+    position: relative;
+}
+
+.Modal{
+    border: 2px solid #ccc;
+}
+
+.description{
+    padding-left: 15px !important;
+    width: 31% !important;
+    padding-top: 5px;
+}
+
+.Wrapper{
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.commentWrapper{
+    margin-left: 10px;
+}
+.Photo{
+    background: url(/src/images/Photo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 7px;
+}
+
+.Actions{
+    width: 69%;
+}
+
+.Name{
+    color: rgb(42,88,133);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Counter{
+
+}
+
+.Icon{
+    color: rgb(74,118,168);
+    opacity: 0.6;
+    padding-right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.height{
+    height: 60vh;
+}
+
+.InputWrapper{
+    border-top: 1px solid rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 28%;
+    display: flex;
+    align-items: center;
+}
+
+.Input{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    opacity: 0.7;
+    padding: 17px 5px;
+    width: 100%;
+}
+
+.PhotoInput{
+    background: url(/src/images/Photo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding-right: 10px;
+}
+
+
+.Trigger{
+    width: 135px !important;
+    height: 115px !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center !important;
+    cursor: pointer;
+}
+
+.HeaderWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Info{
+    margin-left: 10px;
+}
+
+.Date{
+    color: rgb(147,147,147);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.Times{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(74,118,168);
+}

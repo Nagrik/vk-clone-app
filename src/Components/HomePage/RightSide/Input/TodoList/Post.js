@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import classes from "../../UserPosts/DefaultPost/DefaultPost.module.css";
 import {FaAngleDown, FaComment, FaEye, FaHeart, FaShare} from "react-icons/fa";
-import Comment from "../../Comments/Comment";
 import MainComments from "../../MainComments/MainComments";
+import {connect} from "react-redux";
 
-export default ({post}) => {
+const Posts = ({post, counter}) => {
 
     const [like,setLike] = useState(false)
     const [count, setCount] = useState(false)
@@ -17,6 +17,7 @@ export default ({post}) => {
     const onCLicked = () => {
         toggleLike()
         toggleCount()
+
     }
     return(
         <div className={classes.DefaultPost}>
@@ -36,7 +37,6 @@ export default ({post}) => {
             <div className={classes.PostTextWrapper}>
 
                     <p>{post.title}</p>
-
             </div>
             <div className={classes.UnderPostWrapper}>
                 <div className={classes.UnderPost}>
@@ -50,7 +50,7 @@ export default ({post}) => {
                     </div>
                     <div className={classes.Heart}>
                         <FaComment className={classes.Icon}/>
-                        <div className={classes.Count}>0</div>
+                        <div className={classes.Count}>{counter}</div>
                     </div>
                     <div className={classes.Heart}>
                         <FaShare className={classes.Icon}/>
@@ -66,3 +66,11 @@ export default ({post}) => {
         </div>
     )
 }
+
+const mapStateToProps = state =>{
+    return{
+        counter:state.posts.comments.length
+    }
+}
+
+export default connect(mapStateToProps, null)(Posts)

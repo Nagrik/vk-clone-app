@@ -1,27 +1,23 @@
-import React, {useState, useEffect} from 'react'
-import {UnsplashImage} from "./UnsplashImage";
+import React from 'react'
 import classes from './Photo.module.css'
+import Picture2 from "./Pictures/Picture2";
+import Picture3 from "./Pictures/Picture3";
+import Picture4 from "./Pictures/Picture4";
+import Picture1 from "./Pictures/Picture1";
 
 
-function Photo(){
-        const axios = require('axios');
-        const [images, setImages] = useState([]);
-
-
-        useEffect(() => {
-                const apiRoot = 'https://api.unsplash.com';
-                axios
-                    .get(`${apiRoot}/photos/random?client_id=BxQ9Wpmi5VqngMytxsxP0PCeqChBQV24dEGK5zTFzrs&count=4`)
-                    .then(res => setImages([...images, ...res.data]))
-        },[])
-return(
-    <div className={classes.Photos}>
-            {images.map(image => (
-                <UnsplashImage url={image.urls.thumb} key={image.id}  />
-            ))}
-    </div>
-)
+function Photo() {
+        return (
+            <div className={classes.Photos}>
+                    <Picture1/>
+                    <Picture2/>
+                    <Picture3/>
+                    <Picture4/>
+            </div>
+        )
 
 }
+
+
 
 export default Photo
