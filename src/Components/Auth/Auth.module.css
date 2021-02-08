@@ -1,0 +1,61 @@
+
+.Auth{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.Wrapper{
+    background: #fff;
+    padding: 25px 80px;
+    flex-direction: column;
+    box-shadow: rgb(215 216 219) 0 1px 0 0, rgb(227 228 232) 0 0 0 1px;
+
+}
+
+.Form{
+    display: flex;
+    flex-direction: column;
+}
+
+.Input{
+    border-radius: 3px;
+    margin-bottom: 15px;
+    width: 320px;
+    padding: 6px 12px 8px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+
+.FooterAuth{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Button{
+    margin-top: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 7px 16px 8px;
+    cursor: pointer;
+    text-align: center;
+    background-color: steelblue;
+    outline: none;
+    display: inline-block;
+    border: none;
+    color: #fff;
+}
+
+.CheckBox{
+    margin-top: 15px;
+}
+
+.Title{
+    color: rgb(74, 118, 168);
+    font-size: 34px;
+}

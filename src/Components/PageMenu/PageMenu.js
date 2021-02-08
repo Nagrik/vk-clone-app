@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import classes from './PageMenu.module.css'
-import {BrowserRouter, Link} from 'react-router-dom'
+import {Link, NavLink, Route} from 'react-router-dom'
 
 export default class PageMenu extends Component {
     render() {
@@ -8,19 +8,19 @@ export default class PageMenu extends Component {
 
             <div className={classes.Container}>
                 <div className={classes.PageMenu}>
-                    <BrowserRouter>
+                    <Route>
                     <li className={classes.Items}>
-                        <Link to="/Vk-clone" className={classes.Link}>
+                        <NavLink exact to="/" className={classes.Link}>
                             <span>My profile</span>
-                        </Link>
+                        </NavLink>
                     </li>
                         <li className={classes.Items}>
-                        <Link to="/Vk-clone/news/news-feed" className={classes.Link}>
+                        <NavLink to="/News" className={classes.Link}>
                             <span>News</span>
-                        </Link>
+                        </NavLink>
                     </li>
                         <li className={classes.Items}>
-                        <Link to="" className={classes.Link}>
+                        <Link to="/Vk-clone/message" className={classes.Link}>
                             <span>Messages</span>
                         </Link>
                     </li>
@@ -30,26 +30,26 @@ export default class PageMenu extends Component {
                         </Link>
                     </li>
                         <li className={classes.Items}>
-                        <Link to="" className={classes.Link}>
+                        <Link to="/Vk-clone/communities" className={classes.Link}>
                             <span>Communities</span>
                         </Link>
                     </li>
                         <li className={classes.Items}>
-                        <Link to="" className={classes.Link}>
+                        <Link to="/Vk-clone/photos" className={classes.Link}>
                             <span>Photos</span>
                         </Link>
                     </li>
                         <li className={classes.Items}>
-                        <Link to="" className={classes.Link}>
+                        <Link to="/Vk-clone/music" className={classes.Link}>
                             <span>Music</span>
                         </Link>
                     </li>
                         <li className={classes.Items}>
-                        <Link to="" className={classes.Link}>
+                        <Link to="/Vk-clone/videos" className={classes.Link}>
                             <span>Videos</span>
                         </Link>
                     </li>
-                    </BrowserRouter>
+                    </Route>
                 </div>
             </div>
         )
