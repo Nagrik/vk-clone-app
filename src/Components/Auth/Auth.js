@@ -1,131 +1,242 @@
 import React, {Component} from 'react'
 import classes from './Auth.module.css'
-import CheckboxExampleCheckbox from "./Check-Drop/CheckBox";
-import Registration from "./Check-Drop/Registration";
 import Input from './InputUi/input'
 import is from 'is_js'
+import {connect} from "react-redux";
+import Dropdowns from "./Check-Drop/DropDown";
+import DropDownMonth from "./Check-Drop/DropDownMonth";
+import DropDownYear from "./Check-Drop/DropDownYear";
+import Checkboxs from "./Check-Drop/radioButtons";
 
-export default class Auth extends Component{
 
-    state = {
-        formControls:{
-            email:{
-              value:'',
-              type: 'email',
-              label: 'Email',
-              errorMessage:'Enter correct email',
-              valid:false,
-              touched:false,
-              validation:{
-                  required:true,
-                  email:true
-              }
-            },
-            password: {
-                value:'',
-                type: 'password',
-                label: 'Password',
-                errorMessage:'Enter correct password',
-                valid:false,
-                touched:false,
-                validation:{
-                    required:true,
-                    minLength:6
-                }
-            },
-        }
-    }
+class Auth extends Component {
+
     loginHandler = () => {
+    }
+
+    registerHandler = () => {
 
     }
 
-
-    submitHandler = (e) => {
-        e.preventDefault()
+    submitHandler = event => {
+        event.preventDefault()
     }
 
-    validateControl(value, validation) {
-        if(!validation){
+
+    validateControl(value = this.props.value, validation = this.props.validation) {
+        if (!validation) {
             return true
         }
 
         let isValid = true
-
-        if(validation.required){
+        if (validation.required) {
             isValid = value.trim() !== '' && isValid
         }
 
-        if(validation.email){
+        if (validation.email) {
             isValid = is.email(value) && isValid
         }
 
-        if(validation.minLength){
+        if (validation.minLength) {
             isValid = value.length >= validation.minLength && isValid
         }
-
         return isValid
     }
 
+    validateRegisterControl(valueRegister = this.props.valueRegister, validationRegister = this.props.validationRegister) {
+        if (!validationRegister) {
+            return true
+        }
+        let isValidRegister = true
+        if (validationRegister.required) {
+            isValidRegister = valueRegister.trim() !== '' && isValidRegister
+        }
+
+        if (validationRegister.email) {
+            isValidRegister = is.email(valueRegister) && isValidRegister
+        }
+
+        if (validationRegister.minLength) {
+            isValidRegister = valueRegister.length >= validationRegister.minLength && isValidRegister
+        }
+
+        return isValidRegister
+
+    }
+
     onChangeHandler = (event, controlName) => {
-        console.log(`${controlName}:`,event.target.value)
-
-        const formControls = { ...this.state.formControls }
-        const control = { ...formControls[controlName] }
-
+        const formControls = this.props.formControls
+        const control = {...formControls[controlName]}
         control.value = event.target.value
         control.touched = true
         control.valid = this.validateControl(control.value, control.validation)
 
         formControls[controlName] = control
 
+        let isFormValid = true
+
+        Object.keys(formControls).forEach(type => {
+            isFormValid = this.props.formControls[type].valid && isFormValid
+        })
+
         this.setState({
-            formControls
+            formControls, isFormValid
+        })
+
+    }
+    onChangeRegisterHandler = (event, controlName) => {
+        const formControls = this.props.formControlsRegister
+        const control = {...formControls[controlName]}
+        control.valueRegister = event.target.value
+        control.touchedRegister = true
+        control.validRegister = this.validateRegisterControl(control.valueRegister, control.validationRegister)
+
+        formControls[controlName] = control
+
+        let isFormValidRegister = true
+
+        Object.keys(formControls).forEach(type => {
+            isFormValidRegister = this.props.formControlsRegister[type].validRegister && isFormValidRegister
+        })
+
+        this.setState({
+            formControls, isFormValidRegister
         })
     }
 
-    renderInputs(){
-        return Object.keys(this.state.formControls).map((controlName, index) => {
-            const control = this.state.formControls[controlName]
-            return(
+    renderInputs() {
+        return Object.keys(this.props.formControls).map((controlName, index) => {
+            const control = this.props.formControls[controlName]
+            return (
                 <Input
                     key={controlName + index}
                     type={control.type}
+                    placeholder={control.placeholder}
                     value={control.value}
                     valid={control.valid}
                     touched={control.touched}
                     label={control.label}
                     shouldValidate={!!control.validation}
                     errorMessage={control.errorMessage}
-                    onChange={event => this.onChangeHandler(event,controlName)}
+                    onChange={event => this.onChangeHandler(event, controlName)}
                 />
             )
         })
     }
 
-    render(){
+    renderRegisterInputs() {
+        return Object.keys(this.props.formControlsRegister).map((controlName, index) => {
+            const control = this.props.formControlsRegister[controlName]
+            return (
+                <Input
+                    key={controlName + index}
+                    type={control.typeRegister}
+                    value={control.valueRegister}
+                    valid={control.validRegister}
+                    touched={control.touchedRegister}
+                    label={control.labelRegister}
+                    shouldValidate={!!control.validationRegister}
+                    errorMessage={control.errorMessageRegister}
+                    onChange={event => this.onChangeRegisterHandler(event, controlName)}
+                />
+            )
+        })
+    }
 
-        return(
+    render() {
+
+        return (
             <div className={classes.Auth}>
-                <h1 className={classes.Title}>Log in</h1>
-                <div className={classes.Wrapper}>
-                    <form onSubmit={this.submitHandler} className={classes.Form}>
+                <div className={classes.Component}>
+                    <div className={classes.Wrapper}>
+                        <div className={classes.TitleLog}>Log In</div>
+                        <div className={classes.SubTitleLog}>Log In into VK</div>
+                        <form onSubmit={this.submitHandler} className={classes.Form}>
 
-                        { this.renderInputs() }
+                            {this.renderInputs()}
 
-                        <div className={classes.FooterAuth}>
+                            {(this.isValid===false) ? this.props.isFormValid === false : true}
+                            <div className={classes.FooterAuth}>
+                                <button
+                                    type='success'
+                                    className={classes.Button}
+                                    onClick={this.loginHandler}
+                                    disabled={this.props.isFormValid}
+                                >
+
+                                    Log In
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <div className={classes.WrapperRegister}>
+                        <div className={classes.Title}>
+                            <div className={classes.MainTitle}>First time here?</div>
+                            <div className={classes.Subtitle}>Sing up for VK</div>
+                        </div>
+                        <form
+                            className={classes.Form}
+                            onSubmit={this.submitHandler}
+                        >
+                            {(this.isValid===false) ? this.props.isFormValidRegister === false : true}
+
+
+                            {this.renderRegisterInputs()}
+
+                            <p>Select your birthday:</p>
+                            <div className={classes.DropDowns}>
+                                <Dropdowns/>
+                                <DropDownMonth/>
+                                <DropDownYear/>
+                            </div>
+                            <Checkboxs/>
                             <button
                                 type='success'
-                                className={classes.Button}
-                                onClick={this.loginHandler}>
-                                Log In
+                                className={classes.ButtonRegister}
+                                onClick={this.registerHandler}
+                            >
+                                Registration
                             </button>
-                            <CheckboxExampleCheckbox className={classes.CheckBox}/>
-                        </div>
-
-                    </form>
+                        </form>
+                    </div>
                 </div>
-                <Registration/>
             </div>
+
         )
     }
 }
+
+
+const mapStateToProps = (state) => {
+    return {
+        isFormValid: state.posts.inputLogin[0].isFormValid,
+        formControls: state.posts.inputLogin[0].formControls,
+        errorMessage: state.posts.inputLogin[0].formControls.email.errorMessage,
+        validation: state.posts.inputLogin[0].formControls.email.validation,
+        label: state.posts.inputLogin[0].formControls.email.label,
+        touched: state.posts.inputLogin[0].formControls.email.touched,
+        valid: state.posts.inputLogin[0].formControls.email.valid,
+        value: state.posts.inputLogin[0].formControls.email.value,
+        type: state.posts.inputLogin[0].formControls.email.type,
+
+
+        isFormValidRegister: state.inputs.inputRegister[0].isFormValid,
+        formControlsRegister: state.inputs.inputRegister[0].formControlsRegister,
+        errorMessageRegister: state.inputs.inputRegister[0].formControlsRegister.name.errorMessageRegister,
+        validationRegister: state.inputs.inputRegister[0].formControlsRegister.name.validationRegister,
+        labelRegister: state.inputs.inputRegister[0].formControlsRegister.name.labelRegister,
+        touchedRegister: state.inputs.inputRegister[0].formControlsRegister.name.touchedRegister,
+        validRegister: state.inputs.inputRegister[0].formControlsRegister.name.validRegister,
+        valueRegister: state.inputs.inputRegister[0].formControlsRegister.name.valueRegister,
+        typeRegister: state.inputs.inputRegister[0].formControlsRegister.name.typeRegister,
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {}
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Auth)

@@ -26,8 +26,8 @@ const Input = props => {
 
             {
                 isInvalid(props)
-                ? <span>{props.errorMessage || 'Enter tru sense '}</span>
-                : null
+                    ? <span>{props.errorMessage || 'Enter tru sense '}</span>
+                    : null
 
             }
 

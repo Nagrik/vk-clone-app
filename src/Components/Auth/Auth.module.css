@@ -13,7 +13,9 @@
     padding: 25px 80px;
     flex-direction: column;
     box-shadow: rgb(215 216 219) 0 1px 0 0, rgb(227 228 232) 0 0 0 1px;
-
+    height: 330px;
+    display: flex;
+    align-items: center;
 }
 
 .Form{
@@ -23,12 +25,13 @@
 
 .Input{
     border-radius: 3px;
-    margin-bottom: 15px;
-    width: 320px;
+    margin-bottom: 10px;
+    width: 325px;
     padding: 6px 12px 8px;
     outline: none;
     border: 1px solid #ccc;
 }
+
 
 
 .FooterAuth{
@@ -44,18 +47,113 @@
     padding: 7px 16px 8px;
     cursor: pointer;
     text-align: center;
-    background-color: steelblue;
-    outline: none;
-    display: inline-block;
-    border: none;
+    background: rgb(74, 118, 168);;
     color: #fff;
+    border: none;
+    outline: none;
 }
 
 .CheckBox{
     margin-top: 15px;
 }
 
-.Title{
+.TitleLog{
     color: rgb(74, 118, 168);
-    font-size: 34px;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+.Registration{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.WrapperRegister{
+    background: #fff;
+    padding: 25px 80px;
+    flex-direction: column;
+    box-shadow: rgb(215 216 219) 0 1px 0 0, rgb(227 228 232) 0 0 0 1px;
+}
+
+.Title{
+    text-align: center;
+}
+
+
+
+.Form{
+    display: flex;
+    flex-direction: column;
+}
+
+.MainTitle{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(74, 118, 168);
+}
+
+.Subtitle{
+    padding: 5px 0 21px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.DropDown{
+    max-width: 70px;
+    min-width: 0 !important;
+}
+
+.DropDownMonth{
+    max-width: 100px;
+    min-width: 0 !important;
+}
+
+.DropDownYear{
+    max-width: 90px;
+    min-width: 0 !important;
+}
+
+.DropDowns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.CheckBox{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding-top: 10px;
+}
+
+.RadioTitle{
+    margin-top: 15px;
+}
+
+.ButtonRegister{
+    margin-top: 10px;
+    border-radius: 3px;
+    background-color: green;
+    color: white;
+    padding: 10px 16px 8px;
+    border: none;
+}
+
+.Component{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 250px 0 250px;
+}
+
+.SubTitleLog{
+    padding: 5px 0 21px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #ccc;
 }

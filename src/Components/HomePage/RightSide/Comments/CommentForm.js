@@ -49,7 +49,7 @@ import CommentsExample from "./CommentsExample";
                 id='title'
                 value={this.state.title}
                 name='title'
-                // onChange={this.changeInputHandler}
+                onChange={this.changeInputHandler}
                 className={classes.Input}
                 placeholder='Write a comment...'
                 autoComplete="off"

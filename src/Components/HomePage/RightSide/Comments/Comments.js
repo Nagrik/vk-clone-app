@@ -11,7 +11,6 @@ const Comments = ({syncComments}) => {
 }
 
 const mapStateToProps = state =>{
-    console.log(state)
     return {
         syncComments:state.posts.comments
     }
