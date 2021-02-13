@@ -26,7 +26,7 @@ const initialState = {
                     type: 'password',
                     label: 'Password',
                     placeholder:'Email',
-                    errorMessage:'Enter correct password',
+                    errorMessage:'Minimum length 6 characters',
                     valid:false,
                     touched:false,
                     validation:{

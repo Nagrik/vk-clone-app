@@ -10,7 +10,7 @@ const initialState = {
                     typeRegister: 'text',
                     labelRegister: 'Name',
                     placeholder: 'UserName',
-                    errorMessageRegister: 'Enter correct UserName',
+                    errorMessageRegister: 'Minimum length 2 characters',
                     validRegister: false,
                     touchedRegister: false,
                     validationRegister: {
@@ -23,7 +23,7 @@ const initialState = {
                     typeRegister: 'text',
                     labelRegister: 'Surname',
                     placeholder: 'UserSurName',
-                    errorMessageRegister: 'Enter correct UserSurName',
+                    errorMessageRegister: 'Minimum length 2 characters',
                     validRegister: false,
                     touchedRegister: false,
                     validationRegister: {
@@ -49,7 +49,7 @@ const initialState = {
                     typeRegister: 'password',
                     labelRegister: 'Password',
                     placeholder:'Email',
-                    errorMessageRegister:'Enter correct password',
+                    errorMessageRegister:'Minimum password length 6 characters',
                     validRegister:false,
                     touchedRegister:false,
                     validationRegister:{

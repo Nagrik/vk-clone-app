@@ -47,10 +47,17 @@
     padding: 7px 16px 8px;
     cursor: pointer;
     text-align: center;
-    background: rgb(74, 118, 168);;
+    background-color: rgb(74, 118, 168);;
     color: #fff;
     border: none;
     outline: none;
+}
+
+Button:disabled,
+Button[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
 }
 
 .CheckBox{
@@ -142,6 +149,8 @@
     color: white;
     padding: 10px 16px 8px;
     border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .Component{

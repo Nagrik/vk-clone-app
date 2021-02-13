@@ -7,16 +7,12 @@ import Dropdowns from "./Check-Drop/DropDown";
 import DropDownMonth from "./Check-Drop/DropDownMonth";
 import DropDownYear from "./Check-Drop/DropDownYear";
 import Checkboxs from "./Check-Drop/radioButtons";
+import axios  from "axios";
+import {auth} from "../../redux/authAction";
 
 
 class Auth extends Component {
 
-    loginHandler = () => {
-    }
-
-    registerHandler = () => {
-
-    }
 
     submitHandler = event => {
         event.preventDefault()
@@ -43,6 +39,9 @@ class Auth extends Component {
         return isValid
     }
 
+
+
+
     validateRegisterControl(valueRegister = this.props.valueRegister, validationRegister = this.props.validationRegister) {
         if (!validationRegister) {
             return true
@@ -61,16 +60,13 @@ class Auth extends Component {
         }
 
         return isValidRegister
-
     }
-
     onChangeHandler = (event, controlName) => {
         const formControls = this.props.formControls
         const control = {...formControls[controlName]}
         control.value = event.target.value
         control.touched = true
         control.valid = this.validateControl(control.value, control.validation)
-
         formControls[controlName] = control
 
         let isFormValid = true
@@ -82,8 +78,8 @@ class Auth extends Component {
         this.setState({
             formControls, isFormValid
         })
-
     }
+
     onChangeRegisterHandler = (event, controlName) => {
         const formControls = this.props.formControlsRegister
         const control = {...formControls[controlName]}
@@ -94,9 +90,11 @@ class Auth extends Component {
         formControls[controlName] = control
 
         let isFormValidRegister = true
-
+        console.log('EMAIL REG IN:  ' + this.props.valueRegister)
         Object.keys(formControls).forEach(type => {
             isFormValidRegister = this.props.formControlsRegister[type].validRegister && isFormValidRegister
+            // console.log('222' + isFormValidRegister)
+
         })
 
         this.setState({
@@ -104,6 +102,21 @@ class Auth extends Component {
         })
     }
 
+    loginHandler = () => {
+        this.props.auth(
+            this.props.formControls.email.value,
+            this.props.formControls.password.value,
+            true
+        )
+    }
+    registerHandler = () => {
+        this.props.auth(
+            this.props.formControlsRegister.email.valueRegister,
+            this.props.formControlsRegister.password.valueRegister,
+            false
+        )
+
+    }
     renderInputs() {
         return Object.keys(this.props.formControls).map((controlName, index) => {
             const control = this.props.formControls[controlName]
@@ -123,7 +136,6 @@ class Auth extends Component {
             )
         })
     }
-
     renderRegisterInputs() {
         return Object.keys(this.props.formControlsRegister).map((controlName, index) => {
             const control = this.props.formControlsRegister[controlName]
@@ -144,7 +156,6 @@ class Auth extends Component {
     }
 
     render() {
-
         return (
             <div className={classes.Auth}>
                 <div className={classes.Component}>
@@ -154,8 +165,7 @@ class Auth extends Component {
                         <form onSubmit={this.submitHandler} className={classes.Form}>
 
                             {this.renderInputs()}
-
-                            {(this.isValid===false) ? this.props.isFormValid === false : true}
+                            {console.log()}
                             <div className={classes.FooterAuth}>
                                 <button
                                     type='success'
@@ -180,7 +190,6 @@ class Auth extends Component {
                             className={classes.Form}
                             onSubmit={this.submitHandler}
                         >
-                            {(this.isValid===false) ? this.props.isFormValidRegister === false : true}
 
 
                             {this.renderRegisterInputs()}
@@ -196,6 +205,7 @@ class Auth extends Component {
                                 type='success'
                                 className={classes.ButtonRegister}
                                 onClick={this.registerHandler}
+                                disabled={!this.props.isFormValid}
                             >
                                 Registration
                             </button>
@@ -220,6 +230,8 @@ const mapStateToProps = (state) => {
         valid: state.posts.inputLogin[0].formControls.email.valid,
         value: state.posts.inputLogin[0].formControls.email.value,
         type: state.posts.inputLogin[0].formControls.email.type,
+        AuthMail:state.posts.inputLogin[0].formControls.email.value,
+        AuthPass:state.posts.inputLogin[0].formControls.password.value,
 
 
         isFormValidRegister: state.inputs.inputRegister[0].isFormValid,
@@ -231,11 +243,16 @@ const mapStateToProps = (state) => {
         validRegister: state.inputs.inputRegister[0].formControlsRegister.name.validRegister,
         valueRegister: state.inputs.inputRegister[0].formControlsRegister.name.valueRegister,
         typeRegister: state.inputs.inputRegister[0].formControlsRegister.name.typeRegister,
+        AuthRegMail:state.inputs.inputRegister[0].formControlsRegister.email.valueRegister,
+        AuthRegPass:state.inputs.inputRegister[0].formControlsRegister.password.valueRegister,
+
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {}
+const  mapDispatchToProps = dispatch => {
+    return {
+        auth: (email, password, isLogin) => dispatch(auth(email, password, isLogin))
+    }
 }
 
 
