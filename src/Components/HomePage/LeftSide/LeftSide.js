@@ -6,16 +6,17 @@ import FriendsOnline from "./FriendsOnline/FriendsOnline";
 import Group from "./Group/Group";
 import Album from "./Albums/Albums";
 
-export default class LeftSide extends Component {
-    render() {
+const LeftSide = (props) =>  {
         return (
             <div className={classes.LeftSide}>
-                <HomeAvatar/>
+                <HomeAvatar profile={props.profile}/>
+                {console.log(props)}
                 <Friends/>
                 <FriendsOnline/>
                 <Group/>
                 <Album/>
             </div>
         )
-    }
 }
+
+export default LeftSide

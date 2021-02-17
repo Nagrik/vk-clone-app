@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Loader from "../NewsPage/Loader";
 import classes from './FriendsPage.module.css'
+import {NavLink} from "react-router-dom";
 
 export default function FriendsPageContainer(){
 
@@ -25,7 +26,9 @@ export default function FriendsPageContainer(){
             <div className={classes.WrapperImage}>
                 { items.map((item, index) => (
                     <div className={classes.Pictures} key={index}>
+                        <NavLink  to={'/Profile/' + item.id.value}>
                         <img src={item.picture.large} alt={item.name.first} className={classes.Img}/>
+                        </NavLink>
                         <div className={classes.Message}>
                         <h1 className={classes.Name}>{item.name.first} {item.name.last}</h1>
                         <p className={classes.Write}>Write message</p>

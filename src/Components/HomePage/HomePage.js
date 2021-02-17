@@ -4,15 +4,15 @@ import PageMenu from "../PageMenu/PageMenu";
 import LeftSide from "./LeftSide/LeftSide";
 import RightSide from "./RightSide/RightSide";
 
-export default class HomePage extends Component{
-    render(){
+const HomePage = (props) => {
 
     return(
         <div className={classes.HomePage}>
             <PageMenu/>
-            <LeftSide/>
-            <RightSide/>
+            <LeftSide profile={props.profile}/>
+            <RightSide profiel={props.profile}/>
         </div>
     )
-    }
 }
+
+export default HomePage

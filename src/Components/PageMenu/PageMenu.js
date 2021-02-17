@@ -10,7 +10,7 @@ export default class PageMenu extends Component {
                 <div className={classes.PageMenu}>
                     <Route>
                     <li className={classes.Items}>
-                        <NavLink exact to="/" className={classes.Link}>
+                        <NavLink  to="/Profile" className={classes.Link}>
                             <span>My profile</span>
                         </NavLink>
                     </li>

@@ -9,6 +9,7 @@ import {connect} from "react-redux";
 import Logout from "./Components/LogOut/Logout";
 import {authLogin} from "./redux/authAction";
 import FriendsPage from "./Components/FriendsPage/FriendsPage";
+import FriendsContainer from "./Components/FriendsPage/FriendsContainer";
 
 class App extends React.Component {
 
@@ -20,22 +21,20 @@ class App extends React.Component {
         let routes = (
             <div>
                 <PageHeader/>
-                <Redirect exact to='/Auth' component={Auth}/>
                 <Route path='/Auth' component={Auth}/>
-                {/*<Route exact path='/' component={HomePage}/>*/}
+                {/*<Redirect exact to='/Auth' component={Auth}/>*/}
             </div>
         )
 
         if (this.props.isAuthenticated) {
-            console.log('IM HERE')
             routes = (
                 <div>
                     <PageHeader/>
                     <Route path='/News' component={NewsPage}/>
                     <Route path='/Friends' component={FriendsPage}/>
-                    <Route exact path='/' component={HomePage}/>
                     <Route path='/Logout' component={Logout}/>
-                    <Redirect exact to='/'/>
+                    <Route path='/Profile/:userId?' component={FriendsContainer}/>
+                    {/*<Redirect to='/Profile'/>*/}
                 </div>
             )
         }
@@ -62,4 +61,4 @@ function mapDispatchToProps(dispatch){
     }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
+export default connect(mapStateToProps, mapDispatchToProps)(App)

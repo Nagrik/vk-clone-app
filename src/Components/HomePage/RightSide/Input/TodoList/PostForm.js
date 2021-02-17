@@ -108,7 +108,6 @@ class PostForm extends React.Component {
 
 
 const mapStateToProps = (state) => {
-    console.log(state.posts.posts)
     return {
         post: state.posts.posts
     }

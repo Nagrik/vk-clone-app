@@ -39,7 +39,6 @@ function FriendsAPI(){
     }
 
    const mapStateToProps = (state) => {
-       console.log( state)
        return{
     }
    }
