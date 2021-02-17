@@ -7,7 +7,6 @@ import Dropdowns from "./Check-Drop/DropDown";
 import DropDownMonth from "./Check-Drop/DropDownMonth";
 import DropDownYear from "./Check-Drop/DropDownYear";
 import Checkboxs from "./Check-Drop/radioButtons";
-import axios  from "axios";
 import {auth} from "../../redux/authAction";
 
 
@@ -171,7 +170,6 @@ class Auth extends Component {
                                     type='success'
                                     className={classes.Button}
                                     onClick={this.loginHandler}
-                                    disabled={this.props.isFormValid}
                                 >
 
                                     Log In
@@ -205,7 +203,6 @@ class Auth extends Component {
                                 type='success'
                                 className={classes.ButtonRegister}
                                 onClick={this.registerHandler}
-                                disabled={!this.props.isFormValid}
                             >
                                 Registration
                             </button>

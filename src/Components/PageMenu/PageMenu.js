@@ -20,17 +20,17 @@ export default class PageMenu extends Component {
                         </NavLink>
                     </li>
                         <li className={classes.Items}>
-                        <Link to="/Vk-clone/message" className={classes.Link}>
+                        <Link to="/Message" className={classes.Link}>
                             <span>Messages</span>
                         </Link>
                     </li>
                         <li className={classes.Items}>
-                        <Link to="/Vk-clone/friends" className={classes.Link}>
+                        <Link to="/Friends" className={classes.Link}>
                             <span>Friends</span>
                         </Link>
                     </li>
                         <li className={classes.Items}>
-                        <Link to="/Vk-clone/communities" className={classes.Link}>
+                        <Link to="/Communities" className={classes.Link}>
                             <span>Communities</span>
                         </Link>
                     </li>
@@ -40,12 +40,12 @@ export default class PageMenu extends Component {
                         </Link>
                     </li>
                         <li className={classes.Items}>
-                        <Link to="/Vk-clone/music" className={classes.Link}>
+                        <Link to="/music" className={classes.Link}>
                             <span>Music</span>
                         </Link>
                     </li>
                         <li className={classes.Items}>
-                        <Link to="/Vk-clone/videos" className={classes.Link}>
+                        <Link to="/videos" className={classes.Link}>
                             <span>Videos</span>
                         </Link>
                     </li>

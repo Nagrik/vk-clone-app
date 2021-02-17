@@ -6,7 +6,6 @@ import {FaPaperclip} from "react-icons/fa";
 import {FaCamera} from "react-icons/fa";
 import {FaRegSmile} from "react-icons/fa";
 import {FaTelegramPlane} from "react-icons/fa";
-import CommentsExample from "./CommentsExample";
 
  class CommentForm extends Component{
     constructor(props) {
@@ -23,11 +22,13 @@ import CommentsExample from "./CommentsExample";
         const {title} = this.state
 
         const newPost = {
-            title,id:Date.now().toString()
+            title,id:Math.random()
         }
+        console.log(newPost)
         this.props.createComment(newPost)
         this.setState({title:''})
     }
+
 
 
     changeInputHandler = event => {
@@ -54,7 +55,7 @@ import CommentsExample from "./CommentsExample";
                 placeholder='Write a comment...'
                 autoComplete="off"
             />
-            <div className={classes.IconWrapper}>
+                <div className={classes.IconWrapper}>
                 <FaPaperclip className={classes.Icon}/>
                 <FaCamera className={classes.Icon}/>
                 <FaRegSmile className={classes.Icon}/>

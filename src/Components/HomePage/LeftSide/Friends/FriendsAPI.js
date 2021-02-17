@@ -1,41 +1,31 @@
-import React, {Component} from 'react'
+import React, {useEffect, useState} from 'react'
 import classes from './Friends.module.css'
+import {connect} from "react-redux";
+import Loader from "../../../NewsPage/Loader";
 
-class FriendsAPI extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: [1,2,3,4,5,6],
-            loading:false
-        }
-    }
 
-    componentDidMount() {
+
+function FriendsAPI(){
+
+    const [items, setItems] = useState([1,2,3,4,5,6])
+    const [loading, setLoading] = useState(false)
+
+    useEffect (() =>{
         fetch("https://randomuser.me/api/?results=6&nat=US")
             .then((response) => response.json())
             .then((response) => {
-                this.setState({
-                    items:response.results,
-                    loading:true
-                })
+                    setItems(response.results)
+                    setLoading(true)
             })
-    }
-
-    render() {
-
-        let {items,loading} = this.state
-
+    },[])
         if(!loading){
             return (
-                <div>Loading ...</div>
+                <div><Loader/></div>
             )
         }
-
         else {
-
             return (
                 <div className={classes.WrapperImage}>
-
                     { items.map((item, index) => (
                         <div className={classes.Pictures} key={index}>
                         <img src={item.picture.medium} alt={item.name.first} className={classes.Img}/>
@@ -47,6 +37,13 @@ class FriendsAPI extends Component{
             )
         }
     }
-}
 
-export default FriendsAPI
+   const mapStateToProps = (state) => {
+       console.log( state)
+       return{
+    }
+   }
+
+
+
+export default connect(mapStateToProps)(FriendsAPI)

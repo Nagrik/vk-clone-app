@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import { Modal } from 'semantic-ui-react'
 import classes from './Album.module.css'
 
 export default function Album1(){

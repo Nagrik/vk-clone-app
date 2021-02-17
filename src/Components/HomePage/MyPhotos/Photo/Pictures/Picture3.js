@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React  from 'react'
 import classes from '../Photo.module.css'
 import {FaShare, FaHeart, FaTimes} from "react-icons/all";
-import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import { Image, Modal } from 'semantic-ui-react'
+import Velo from '../../../../../images/Velo.jpg'
 
 
 function Picture3() {
@@ -13,11 +14,14 @@ function Picture3() {
             onClose={() => setOpen(false)}
             onOpen={() => setOpen(true)}
             open={open}
-            trigger={<Image size='small' className={classes.Trigger} src='https://www.gettyimages.com/gi-resources/images/frontdoor/editorial/Velo/GettyImages-Velo-1088643550.jpg'/>}
+            trigger={<Image size='small' className={classes.Trigger}
+                            src={Velo}/>}
 
         >
             <Modal.Content image className={classes.ModalWindow}>
-                <Image size='big' className={classes.Modal} src='https://www.gettyimages.com/gi-resources/images/frontdoor/editorial/Velo/GettyImages-Velo-1088643550.jpg' wrapped />
+                <Image size='big' className={classes.Modal}
+                       src='https://www.gettyimages.com/gi-resources/images/frontdoor/editorial/Velo/GettyImages-Velo-1088643550.jpg'
+                       wrapped/>
                 <Modal.Description className={classes.description}>
                     <div className={classes.Wrapper}>
                         <div className={classes.HeaderWrapper}>
@@ -43,7 +47,6 @@ function Picture3() {
 
         </Modal>
     )
-
 }
 
 

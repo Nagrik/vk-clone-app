@@ -1,4 +1,4 @@
-import {CREATE_INPUT, CREATE_INPUT_REGISTER} from "./types";
+import {CREATE_INPUT_REGISTER} from "./types";
 
 const initialState = {
     isFormValidRegister:false,

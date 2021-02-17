@@ -2,6 +2,7 @@ import React from 'react'
 import classes from '../Photo.module.css'
 import {FaShare, FaHeart, FaTimes} from "react-icons/all";
 import {Image, Modal } from 'semantic-ui-react'
+import Mops from '../../../../../images/Mops.jpg'
 
 
 function Picture2() {
@@ -13,7 +14,7 @@ function Picture2() {
             onClose={() => setOpen(false)}
             onOpen={() => setOpen(true)}
             open={open}
-            trigger={<Image size='small' className={classes.Trigger} src='https://im.indiatimes.in/content/itimes/photo/2016/Aug/26/1472233327-25-pictures-that-will-instantly-make-you-happy_card.jpg?w=1004&h=668&cc=1'/>}
+            trigger={<Image size='small' className={classes.Trigger} src={Mops}/>}
 
         >
             <Modal.Content image className={classes.ModalWindow}>

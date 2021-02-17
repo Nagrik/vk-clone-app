@@ -1,0 +1,84 @@
+.PageFriends{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.FriendsSwitcherWrapper{
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: flex-start;
+    width: 500px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+.FriendsSwitcher{
+    display: flex;
+
+
+}
+
+.All{
+    border-bottom: 2px solid rgb(81,129,184);
+    padding: 15px 0;
+    font-size: 14px;
+    cursor: pointer;
+    color: rgb(101,101,101);
+}
+
+.Online{
+    padding: 15px 0;
+    font-size: 14px;
+    cursor: pointer;
+    color: rgb(101,101,101);
+    margin-left: 20px;
+}
+
+.Test{
+    display: flex;
+    flex-direction: column;
+}
+
+.Img{
+
+}
+
+.Pictures{
+display: flex;
+    background-color: white;
+    border-top: 1px solid #eee;
+    padding: 12px 25px;
+
+}
+.WrapperImage{
+
+}
+
+.Message{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0 0 20px;
+}
+
+.Name{
+    color: rgb(42,88,133);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.Write{
+    color: rgb(42,88,133);
+    font-size: 13px;
+    padding-top: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.Img{
+    border-radius: 50%;
+}

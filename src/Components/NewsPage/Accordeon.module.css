@@ -1,0 +1,45 @@
+.Menu{
+    font-size: 14px;
+    line-height: 2.3;
+    cursor: pointer;
+}
+.Menu li{
+    padding: 0 5px 0 18px;
+    color: rgb(101,101,101);
+}
+
+.Menu li:hover{
+    background-color: rgb(240,242,245);
+}
+
+.News{
+    color: rgb(42, 88, 133);
+    padding: 1px 0 0 18px;
+    border-left: 3px solid rgb(81, 129, 184);
+    background-color: rgb(240,242,245);
+    margin: 5px 0;
+    cursor: pointer;
+    line-height: 2.3;
+}
+
+.accordion{
+    width: 25% !important;
+    height: 100%;
+}
+
+.ActiveTitle{
+    padding: 0 5px !important;
+}
+
+.Title{
+    padding: 3px 0 3px 18px;
+    font-size: 14px;
+    line-height: 2.3;
+    margin: 5px 0;
+    cursor: pointer;
+    color:rgb(42, 88, 133) ;
+}
+
+.Content{
+    padding-bottom: 0 !important;
+}

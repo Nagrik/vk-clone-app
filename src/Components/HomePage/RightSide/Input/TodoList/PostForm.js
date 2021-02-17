@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from "../Input.module.css";
-import {FaCog, FaMusic, FaRegImage, FaRegSmile, FaSort, FaSortAmountDown, FaVideo} from "react-icons/fa";
+import {FaCog, FaMusic, FaRegImage, FaRegSmile, FaSort, FaVideo} from "react-icons/fa";
 import {connect} from 'react-redux'
 import {createPost} from "../../../../../redux/actionCreator";
 
@@ -25,7 +25,7 @@ class PostForm extends React.Component {
         }
 
         const newPost = {
-            title, id: Date.now().toString()
+            title, id: Math.random()
         }
         this.props.createPost(newPost)
         this.setState({title:''})
@@ -106,10 +106,18 @@ class PostForm extends React.Component {
     }
 }
 
+
+const mapStateToProps = (state) => {
+    console.log(state.posts.posts)
+    return {
+        post: state.posts.posts
+    }
+}
+
 const mapDispatchToProps = {
     createPost
 }
 
 
 
-export default connect(null,mapDispatchToProps)(PostForm)
+export default connect(mapStateToProps,mapDispatchToProps)(PostForm)

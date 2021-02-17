@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import classes from '../Photo.module.css'
 import {FaShare, FaHeart, FaTimes} from "react-icons/all";
-import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import {  Image, Modal } from 'semantic-ui-react'
+import Roach from '../../../../../images/Roach.jpg'
 
 
 function Picture2() {
@@ -13,7 +14,7 @@ function Picture2() {
             onClose={() => setOpen(false)}
             onOpen={() => setOpen(true)}
             open={open}
-            trigger={<Image size='small' className={classes.Trigger} src='https://api.contentstack.io/v2/assets/575e4d1c0342dfd738264a1f/download?uid=bltada7771f270d08f6'/>}
+            trigger={<Image size='small' className={classes.Trigger} src={Roach}/>}
 
         >
             <Modal.Content image className={classes.ModalWindow}>

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import classes from '../Photo.module.css'
 import {FaShare, FaHeart, FaTimes} from "react-icons/all";
 import {Image, Modal } from 'semantic-ui-react'
+import Girl from '../../../../../images/Girl.jpg'
 
 
 function Picture2() {
@@ -13,7 +14,7 @@ function Picture2() {
             onClose={() => setOpen(false)}
             onOpen={() => setOpen(true)}
             open={open}
-            trigger={<Image size='small' className={classes.Trigger} src='https://buffer.com/library/content/images/2020/05/Frame-9.png'/>}
+            trigger={<Image size='small' className={classes.Trigger} src={Girl}/>}
 
         >
             <Modal.Content image className={classes.ModalWindow}>
