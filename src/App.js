@@ -1,8 +1,6 @@
 import React from "react";
-import classes from './App.module.css'
 import PageHeader from "./Components/PageHeader/PageHeader";
-import HomePage from "./Components/HomePage/HomePage";
-import {Route, Redirect, withRouter} from "react-router-dom";
+import {Route,Redirect} from "react-router-dom";
 import NewsPage from "./Components/NewsPage/NewsPage";
 import Auth from "./Components/Auth/Auth";
 import {connect} from "react-redux";
@@ -18,38 +16,41 @@ class App extends React.Component {
     }
 
     render() {
-        let routes = (
-            <div>
-                <PageHeader/>
-                <Route path='/Auth' component={Auth}/>
-                {/*<Redirect exact to='/Auth' component={Auth}/>*/}
-            </div>
-        )
-
-        if (this.props.isAuthenticated) {
-            routes = (
+        if(this.props.isAuthenticated === false) {
+            return (
+                    <div>
+                        <PageHeader/>
+                        <Redirect to='/Auth' component={Auth}/>
+                        <Route path='/Auth' component={Auth}/>
+                    </div>
+            )
+        }
+        else{
+            return (
                 <div>
                     <PageHeader/>
+                    <Route path='/Profile/:userId?' component={FriendsContainer}/>
+                    <Redirect exact to='/Profile' component={FriendsContainer}/>
                     <Route path='/News' component={NewsPage}/>
                     <Route path='/Friends' component={FriendsPage}/>
                     <Route path='/Logout' component={Logout}/>
-                    <Route path='/Profile/:userId?' component={FriendsContainer}/>
-                    {/*<Redirect to='/Profile'/>*/}
                 </div>
             )
         }
 
 
-        return (
-            <div className={classes.App}>
-                {routes}
-            </div>
-        )
+
+        // return (
+        //     <div className={classes.App}>
+        //         {routes}
+        //     </div>
+        // )
 
     }
 }
 
 function mapStateToProps(state){
+    console.log(!!state.auth.token)
     return {
         isAuthenticated: !!state.auth.token
     }

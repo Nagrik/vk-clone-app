@@ -14,6 +14,7 @@ export default function FriendsPageContainer(){
             .then((response) => {
                 setItems(response.results)
                 setLoading(true)
+                console.log(response.results)
             })
     },[])
     if(!loading){

@@ -51,3 +51,13 @@
     margin-top: 10px;
     background: rgb(229, 235, 241);
 }
+
+.FriendsPhoto{
+    width: 215px;
+    height: 200px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    margin-left: 5px;
+}

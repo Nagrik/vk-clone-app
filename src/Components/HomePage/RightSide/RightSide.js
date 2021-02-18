@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import classes from './RightSide.module.css'
 import PageInfo from "./PageInfo/PageInfo";
 import MyPhotos from "../MyPhotos/MyPhotos";
@@ -7,11 +7,11 @@ import Posts from "./Input/TodoList/Posts";
 import UserPosts from "./UserPosts/UserPosts";
 import DefaultPost from "./UserPosts/DefaultPost/DefaultPost";
 
-export default class RightSide extends Component {
-    render() {
+export default function  RightSide (props) {
+
         return (
             <div className={classes.RightSide}>
-                <PageInfo/>
+                <PageInfo profile={props}/>
                 <MyPhotos/>
                 {/*<Posts/>*/}
                 <PostForm/>
@@ -20,5 +20,4 @@ export default class RightSide extends Component {
                 <DefaultPost/>
             </div>
         )
-    }
 }

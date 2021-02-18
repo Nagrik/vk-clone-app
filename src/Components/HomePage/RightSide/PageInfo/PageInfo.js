@@ -1,15 +1,14 @@
-import React, {Component} from 'react'
+import React from 'react'
 import classes from './PageInfo.module.css'
 import PageInfoHeader from "./PageInfoHeader/PageInfoHeader";
 import PageInfoContent from "./PageInfoContent/PageInfoContent";
 
-export default class PageInfo extends Component {
-    render() {
+export default function PageInfo(props) {
         return (
             <div className={classes.PageInfo}>
-                <PageInfoHeader/>
-                <PageInfoContent/>
+                <PageInfoHeader profile={props}/>
+                <PageInfoContent profile={props.profile}/>
             </div>
         )
-    }
+
 }

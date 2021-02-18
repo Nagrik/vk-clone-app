@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import classes from './HomePage.module.css'
 import PageMenu from "../PageMenu/PageMenu";
 import LeftSide from "./LeftSide/LeftSide";
@@ -9,8 +9,8 @@ const HomePage = (props) => {
     return(
         <div className={classes.HomePage}>
             <PageMenu/>
-            <LeftSide profile={props.profile}/>
-            <RightSide profiel={props.profile}/>
+            <LeftSide profile={props}/>
+            <RightSide profile={props}/>
         </div>
     )
 }

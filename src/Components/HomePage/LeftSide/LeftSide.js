@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import HomeAvatar from "./Avatar/HomeAvatar";
 import classes from './LeftSide.module.css'
 import Friends from "./Friends/Friends";
@@ -9,8 +9,7 @@ import Album from "./Albums/Albums";
 const LeftSide = (props) =>  {
         return (
             <div className={classes.LeftSide}>
-                <HomeAvatar profile={props.profile}/>
-                {console.log(props)}
+                <HomeAvatar profile={props}/>
                 <Friends/>
                 <FriendsOnline/>
                 <Group/>
