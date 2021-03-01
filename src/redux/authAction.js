@@ -1,5 +1,5 @@
 import axios from "axios";
-import {AUTH_LOGOUT, AUTH_SUCCESS} from "./types";
+import {AUTH_LOGOUT, AUTH_SUCCESS, LOGIN} from "./types";
 
 
 
@@ -13,11 +13,11 @@ export const auth = (email, password, isLogin) => {
             password,
             returnSecureToken:true
         })
-        dispatch({
-            type:'LOGIN',
+         dispatch({
+            type:LOGIN,
             payload:response.data
         })
-        const data = response.data
+         const data = response.data
 
         const expirationDate = new Date(new Date().getTime() + data.expiresIn * 1000)
 
@@ -34,7 +34,7 @@ export function authLogout(time){
     return dispatch => {
         setTimeout(() => {
             dispatch(logout())
-        }, time *1000)
+        }, time * 1000)
     }
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeader from "./Components/PageHeader/PageHeader";
-import {Route,Redirect} from "react-router-dom";
+import {Route, Redirect, withRouter} from "react-router-dom";
 import NewsPage from "./Components/NewsPage/NewsPage";
 import Auth from "./Components/Auth/Auth";
 import {connect} from "react-redux";
@@ -8,6 +8,9 @@ import Logout from "./Components/LogOut/Logout";
 import {authLogin} from "./redux/authAction";
 import FriendsPage from "./Components/FriendsPage/FriendsPage";
 import FriendsContainer from "./Components/FriendsPage/FriendsContainer";
+import MessagesPage from "./Components/MessagePage/MessageForm";
+import {initializeApp} from "./redux/AppReducer";
+import Loader from "./Components/NewsPage/Loader";
 
 class App extends React.Component {
 
@@ -16,6 +19,9 @@ class App extends React.Component {
     }
 
     render() {
+        // if(!this.props.initialized){
+        //     return <Loader/>
+        // }
         if(this.props.isAuthenticated === false) {
             return (
                     <div>
@@ -34,32 +40,25 @@ class App extends React.Component {
                     <Route path='/News' component={NewsPage}/>
                     <Route path='/Friends' component={FriendsPage}/>
                     <Route path='/Logout' component={Logout}/>
+                    <Route path='/Message' component={MessagesPage}/>
                 </div>
             )
         }
-
-
-
-        // return (
-        //     <div className={classes.App}>
-        //         {routes}
-        //     </div>
-        // )
-
     }
 }
 
 function mapStateToProps(state){
-    console.log(!!state.auth.token)
     return {
-        isAuthenticated: !!state.auth.token
+        isAuthenticated: !!state.auth.token,
+        initialized: state.app.initialized
     }
 }
-
+//
 function mapDispatchToProps(dispatch){
     return{
-        authLogin: () => dispatch(authLogin())
+        authLogin: () => dispatch(authLogin()),
+         initializeApp
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))

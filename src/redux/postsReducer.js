@@ -1,9 +1,10 @@
-import {CREATE_COMMENT, CREATE_INPUT, CREATE_POST} from "./types";
+import {CREATE_COMMENT, CREATE_INPUT, CREATE_POST, SEND_MESSAGE} from "./types";
 
 const initialState = {
     posts:[],
     fetchedPosts:[],
     comments:[],
+    messages:[],
     inputLogin:[
          {
             isFormValid:false,
@@ -39,8 +40,6 @@ const initialState = {
     ],
 }
 
-
-
 export const postsReducer = (state = initialState, action) =>{
     switch (action.type){
         case CREATE_POST:
@@ -49,7 +48,15 @@ export const postsReducer = (state = initialState, action) =>{
             return {...state,comments: state.comments.concat([action.payload])}
         case CREATE_INPUT:
             return {...state,inputRegister: state.inputRegister.concat([action.payload])}
+        case SEND_MESSAGE:
+            let body = action.newMessageBody;
+            return {
+                ...state,
+                messages: [...state.messages, {id:Math.random(), message:body}]
+            }
             default:return state
-
     }
 }
+
+
+

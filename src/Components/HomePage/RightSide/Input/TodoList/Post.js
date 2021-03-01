@@ -6,9 +6,8 @@ import {connect} from "react-redux";
 
 const Posts = ({post, counter}) => {
 
-    const [like,setLike] = useState(false)
+    const [like, setLike] = useState(false)
     const [count, setCount] = useState(false)
-
 
 
     const toggleLike = () => setLike(prev => !prev)
@@ -19,7 +18,9 @@ const Posts = ({post, counter}) => {
         toggleCount()
 
     }
-    return(
+
+
+    return (
         <div className={classes.DefaultPost}>
             <div className={classes.Header}>
                 <div className={classes.UserInfo}>
@@ -36,7 +37,8 @@ const Posts = ({post, counter}) => {
             </div>
             <div className={classes.PostTextWrapper}>
 
-                    <p>{post.title}</p>
+                <p>{post.title}</p>
+
             </div>
             <div className={classes.UnderPostWrapper}>
                 <div className={classes.UnderPost}>

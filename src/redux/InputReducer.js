@@ -1,4 +1,4 @@
-import {CREATE_INPUT_REGISTER} from "./types";
+import {CREATE_INPUT_REGISTER, SEND_MESSAGE} from "./types";
 
 const initialState = {
     isFormValidRegister:false,
@@ -67,7 +67,9 @@ export const InputReducer = (state = initialState, action) => {
     switch (action.type){
         case CREATE_INPUT_REGISTER:
             return {...state,inputRegister: state.inputRegister.concat([action.payload])}
-        default:
+            default:
             return state
     }
 }
+
+export const sendMessageCreator = (newMessageBody) => ({type:SEND_MESSAGE, newMessageBody})

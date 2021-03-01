@@ -1,0 +1,104 @@
+.Messages{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.Field{
+    background: rgb(255,255,255);
+    box-shadow: rgb(215, 216, 219) 0 1px 0 0, rgb(227, 228, 232) 0 0 0 1px;
+    width: 100%;
+    min-height: 600px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.MessagesWrapper{
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 60px;
+    position: relative;
+}
+
+.Form{
+    display: flex;
+}
+.Input{
+    width: 100%;
+    white-space: nowrap;
+    resize: none;
+    height: auto;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    font-weight: 100;
+    color: rgb(51,51,51);
+    font-family: sans-serif;
+    padding: 10px 5px;
+}
+
+.InputWrapper{
+    width: 100%;
+
+}
+
+.Friends{
+    border: 1px solid #eee;
+    width: 22%;
+    margin-top: 18px;
+    background-color: white;
+    box-shadow: rgb(215, 216, 219) 0 1px 0 0, rgb(227, 228, 232) 0 0 0 1px;
+
+}
+
+.Dialogs{
+    border: 1px solid #ccc;
+    padding:15px 10px;
+    color: white;
+    background-color:rgb(42,88,133);
+    display: flex;
+    text-align: center;
+}
+
+.Icon{
+    font-size: 18px;
+    padding-right: 5px;
+}
+
+.Button{
+    background-color:rgb(42,88,133);
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding:7px 10px;
+}
+
+.MyMessage{
+    font-size: 21px;
+    color: black;
+   padding-left: 55px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+
+.MyMessage::before{
+    content: '';
+    position: absolute;
+    background: url(/src/images/Photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    left: 15px;
+}
+
+
+

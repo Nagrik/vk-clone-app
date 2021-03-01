@@ -5,7 +5,7 @@ import Post from "./Post";
 
 const Posts =({syncPosts}) => {
 
-    return syncPosts.map(post => <Post post={post} key={post.id}/> )
+    return syncPosts.reverse().map(post => <Post post={post} key={post.id}/> )
 }
 
 const mapStateToProps = state => {

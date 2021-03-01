@@ -8,9 +8,16 @@ import DropDownMonth from "./Check-Drop/DropDownMonth";
 import DropDownYear from "./Check-Drop/DropDownYear";
 import Checkboxs from "./Check-Drop/radioButtons";
 import {auth} from "../../redux/authAction";
+import PortalRegister from "./InputUi/Portal";
 
 
 class Auth extends Component {
+
+    state = {
+        formControls:false,
+        isFormValid:false,
+        isFormValidRegister:false
+    }
 
 
     submitHandler = event => {
@@ -18,7 +25,7 @@ class Auth extends Component {
     }
 
 
-    validateControl(value = this.props.value, validation = this.props.validation) {
+    validateControl(value = this.props.value, validation = this.props.validation, ) {
         if (!validation) {
             return true
         }
@@ -57,7 +64,6 @@ class Auth extends Component {
         if (validationRegister.minLength) {
             isValidRegister = valueRegister.length >= validationRegister.minLength && isValidRegister
         }
-
         return isValidRegister
     }
     onChangeHandler = (event, controlName) => {
@@ -92,7 +98,6 @@ class Auth extends Component {
         console.log('EMAIL REG IN:  ' + this.props.valueRegister)
         Object.keys(formControls).forEach(type => {
             isFormValidRegister = this.props.formControlsRegister[type].validRegister && isFormValidRegister
-            // console.log('222' + isFormValidRegister)
 
         })
 
@@ -114,6 +119,8 @@ class Auth extends Component {
             this.props.formControlsRegister.password.valueRegister,
             false
         )
+        return <PortalRegister/>
+
 
     }
     renderInputs() {
@@ -164,16 +171,23 @@ class Auth extends Component {
                         <form onSubmit={this.submitHandler} className={classes.Form}>
 
                             {this.renderInputs()}
-                            {console.log()}
                             <div className={classes.FooterAuth}>
-                                <button
-                                    type='success'
-                                    className={classes.Button}
-                                    onClick={this.loginHandler}
-                                >
-
-                                    Log In
-                                </button>
+                                {!this.state.isFormValid
+                                    ?<button
+                                        type='success'
+                                        className={classes.Button}
+                                        onClick={this.loginHandler}
+                                        disabled
+                                    >
+                                        Log In
+                                    </button>
+                                    :<button
+                                        type='success'
+                                        className={classes.Button}
+                                        onClick={this.loginHandler}
+                                    >
+                                        Log In
+                                    </button>}
                             </div>
                         </form>
                     </div>
@@ -199,13 +213,23 @@ class Auth extends Component {
                                 <DropDownYear/>
                             </div>
                             <Checkboxs/>
-                            <button
-                                type='success'
-                                className={classes.ButtonRegister}
-                                onClick={this.registerHandler}
-                            >
-                                Registration
-                            </button>
+                            {console.log(this.state.isFormValid)}
+                            {!this.state.isFormValidRegister
+                                ?<button
+                                    type='success'
+                                    className={classes.Button}
+                                    onClick={this.registerHandler}
+                                    disabled
+                                >
+                                    Registration
+                                </button>
+                                :<button
+                                    type='success'
+                                    className={classes.Button}
+                                    onClick={this.registerHandler}
+                                >
+                                    Registration
+                                </button>}
                         </form>
                     </div>
                 </div>

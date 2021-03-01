@@ -22,7 +22,7 @@ import { FaRegChartBar } from 'react-icons/fa';
     else {
          return (
              <div className={classes.HomeAvatar}>
-                 <img className={classes.FriendsPhoto} alt='123'/>
+                 <img className={classes.FriendsPhoto} alt='123'
                      src={props.profile.profile.profile.profile.friends.profile.results[0].picture.large}/>
                  <div className={classes.Wrapper}>
                      <button type='button' className={classes.Button}>
